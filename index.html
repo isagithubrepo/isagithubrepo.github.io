@@ -76,6 +76,14 @@ h1 {
 	padding-left: 24px;
 	font-size: 18px;
 }
+
+a.link {
+	text-decoration: none;
+}
+
+img.ico {
+	vertical-align:middle;
+}
 </style>
 </head>
 	<title>Welcome!</title>
@@ -118,8 +126,13 @@ h1 {
 					Programming<br>
 					PC Hardware<br>
 					Games<br>
-					Internet Browsing<br>
+					Internet Browsing<br><br>
 				</p>
+				<h1>Other Documents:</h1>
+				<p>
+					<a class="link" href="Resume_Isa_24_nov.docx"><img class="ico" src="view.png" title="View Isa resume"/>View Resume</a>
+				</p>
+				
 		</div>
 		
 		<div class="content" id="contact">
@@ -153,7 +166,7 @@ function hideContentbut(showp){
 
 hideContentbut(page);
 
-$("a").on('click', function(e) {
+$("li a").on('click', function(e) {
 	e.preventDefault();
 	$link=$(this).attr('href');
 	page="div#"+$link;
