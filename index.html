@@ -1,0 +1,169 @@
+<html>
+<head>
+<style>
+html {
+	background-color:#f2f2f2;
+	font-family: calibri;
+}
+	
+header {
+	Padding: 30px 0px 0px 10px;
+	background-color:#ffd966;
+	height: 50px;
+	text-align: center;
+	font-size: 34px;
+	font-weight: bold;
+}
+
+nav {
+	background-color:#ffd966;
+	height: 50px;
+	font-size: 18px;
+}
+
+article {
+	background-color:white;
+}
+	
+footer {
+	background-color:#ffd966;
+	font-size: 12;
+	text-align: center;
+	margin-top: 10px;
+	color: white;
+}
+
+H3 {
+	background-color:#ffd966;
+	text-align: center;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+nav li {
+	float: left;
+}
+
+nav li a {
+	font-weight: bold;
+	text-decoration: none;
+	padding: 10px;
+	color: white;
+}
+
+.content {
+	padding: 0px 0px 10px 0px;
+}
+
+p {
+	padding-left: 25px;
+}
+
+label#mail{
+	color: green;
+	font-weight: bold;
+}
+
+label#zero {
+	color: white;
+}
+
+h1 {
+	padding-left: 24px;
+	font-size: 18px;
+}
+</style>
+</head>
+	<title>Welcome!</title>
+<body>
+
+	<header>
+		Welcome Visit<label id="zero">O</label>r!
+	</header>
+	<nav>
+		<ul>
+			<li><a href="home" onClick="changeHColor()">Home</a></li>
+			<li><a href="about_me" onClick="changeHColor()">About Me</a></li>
+			<li><a href="contact" onClick="changeHColor()">Contact Me</a></li>
+		</ul>
+	</nav>
+	
+	<article>
+		<div class="content" id="home">
+			<h3>Home</h3>
+			<p>
+				This is Home
+			</p>
+		</div>
+		
+		<div class="content" id="about_me">
+			<h3>About Me</h3>
+				<p>
+					Hello, My name is muhd Isa<br>
+				</p>
+				
+				<h1>Technical Skill:</h1>
+				<p>
+					<b>OS Platform:</b> Windows 7, 10<br>
+					<b>Software:</b> MS word, MS powerpoint, MS excel, XAMPP, Android Studio(basic), Oracle VM virtualBox(basic)<br>
+					<b>Language:</b> Java(basic), C++(basic), Html, PHP mysql/PDO, Javascript(Jquery)<br><br>
+				</p>
+				
+				<h1>Interest:</h1>
+				<p>
+					Programming<br>
+					PC Hardware<br>
+					Games<br>
+					Internet Browsing<br>
+				</p>
+		</div>
+		
+		<div class="content" id="contact">
+			<h3>Contact Me</h3>
+			<p>
+				<label id="mail">isa20021991@gmail.com</label>
+			</p>
+		</div>
+	</article>
+	
+	<footer>
+		Created by Muhd Isa 2016
+	</footer>
+
+<script src="jquery-3.1.1.min.js"></script>
+<script>
+
+var page="div#home";
+var color=["#ffb3b3", "#b3b3ff", "#b3ffb3", "#ecb3ff"]; //white red blue green purple
+
+
+function randumn(){
+	var n=Math.floor((Math.random()*4)+0);
+	return n;
+}
+
+function hideContentbut(showp){
+	$(".content").hide();
+	$(showp).fadeIn();
+}
+
+hideContentbut(page);
+
+$("a").on('click', function(e) {
+	e.preventDefault();
+	$link=$(this).attr('href');
+	page="div#"+$link;
+	hideContentbut(page);
+});
+
+function changeHColor() {
+	$("h3, header, nav, footer").css("background-color",color[randumn()]);
+}
+
+</script>
+</body>
+</html>
