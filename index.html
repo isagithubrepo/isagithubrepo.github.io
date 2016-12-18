@@ -23,8 +23,8 @@ nav {
 
 div.container {
 	margin-top: -20px;
-	visibility: hidden;
-	height: 0px;
+	display: none;
+	height: auto;
 	background-color:white;
 }
 	
@@ -89,6 +89,10 @@ img.ico {
 	vertical-align:middle;
 }
 
+p.footnote {
+	font-size: 12px;
+}
+
 </style>
 </head>
 	<title>Welcome!</title>
@@ -143,7 +147,12 @@ img.ico {
 			<h3>My Projects</h3>
 			<h1>Java:</h1>
 			<p>
-				<a class="link" href="projects/java-isansweringmachine.zip">IAM - Isa Answering Machine</a> - IAM is simple and basic java project with simple gui where user can ask about me (the answer is predefined and limited)
+				<a class="link" href="projects/java-myansweringmachine.zip">IAM - Isa Answering Machine</a> - IAM is simple and basic *java project with simple gui where user can ask about me (the answer is predefined and limited)
+			</p>
+			<br>
+			<br>
+			<p class="footnote">
+				*make sure you have installed latest version of java on your system to run java based application
 			</p>
 		</div>
 		
@@ -163,36 +172,35 @@ img.ico {
 <script src="script/jquery-3.1.1.min.js"></script>
 <script>
 
-var page="div#home";
-var color=["#ffb3b3", "#b3b3ff", "#b3ffb3", "#ecb3ff"]; //white red blue green purple
+$(document).ready(function(){
+	var page="div#home";
+	var color=["#ffb3b3", "#b3b3ff", "#b3ffb3", "#ecb3ff"]; //white red blue green purple
 
 
-function randumn(){
-	var n=Math.floor((Math.random()*4)+0);
-	return n;
-}
+	function randumn(){
+		var n=Math.floor((Math.random()*4)+0);
+		return n;
+	}
 
-function hideContentbut(showp){
-	$(".content").hide();
-	$(showp).fadeIn();
-}
+	function hideContentbut(showp){
+		$(".content").hide();
+		$(showp).fadeIn();
+	}
 
-hideContentbut(page);
+	$("li a").on('click', function(e) {
+		e.preventDefault();
+		$link=$(this).attr('href');
+		page="div#"+$link;
+		hideContentbut(page);
+	});
 
-$("li a").on('click', function(e) {
-	e.preventDefault();
-	$link=$(this).attr('href');
-	page="div#"+$link;
+	function changeHColor() {
+		$("h3, header, nav, footer, li a").css("background-color",color[randumn()]);
+	}
+	
+	$("div.container").show();
 	hideContentbut(page);
 });
-
-function changeHColor() {
-	$("h3, header, nav, footer, li a").css("background-color",color[randumn()]);
-}
-
-$("div.container").css("visibility","visible");
-$("div.container").css("height","auto");
-
 </script>
 </body>
 </html>
