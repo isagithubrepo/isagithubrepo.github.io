@@ -1,0 +1,112 @@
+
+body {
+	background-image: url(../img/bg1-1.jpg);
+	background-position: top-left;
+	background-repeat: repeat;
+	background-size: cover;
+	background-color: #e6e6e6;
+	font-family: Arial;
+}
+
+h1 {
+	background-color: black;
+	display:none;
+	margin-top:-100px;
+	position: absolute;
+	z-index:-1;
+	font-size: 90px;
+	color: white;
+	width: auto;
+}
+
+h2 {
+	margin: 0px 0px 14px 0px;
+	padding: 0px;
+}
+
+p.my {
+	position: absolute;
+	z-index:-1;
+	font-weight: bold;
+	color: #d9d9d9;
+}
+
+a {
+	font-weight: bold;
+	text-decoration: none;
+	color: #80b3ff;
+}
+
+img.ico {
+	vertical-align:middle;
+}
+
+div.wrapper {
+	margin:10% 0px 0px 45%;
+	width: 240px;
+	height: auto;
+	background-color: green;
+}
+
+div.about_me,
+div.my_projects,
+div.contact_me {
+	display: none;
+	opacity: 0.5;
+	float: left;
+	background-color:#f2f2f2;
+	color: black;
+	text-align: center;
+	width: 110px;
+	height: 110px;
+	padding:0px 0px 0px 0px;
+	border-radius: 100%;
+	border-style: solid;
+	border-color: black;
+	border-width: 2px;
+}
+
+div.content {
+	display: none;
+	opacity: 0.85;
+	float: left;
+	margin: -20px 0px 0px 40px;
+	padding: 0px 20px 20px 20px;
+	position: absolute;
+	background-color: #ffffff;
+	border-radius: 10px;
+	border-style: solid;
+	border-color: #999999;
+	border-width: 2px;
+	width: auto;
+	height: auto;
+	color: #404040;
+}
+
+label {	
+	padding-top:43px;
+	display: block;
+}
+
+div.about_me:hover,
+div.my_projects:hover,
+div.contact_me:hover{
+	border-color: #4dd2ff;
+	background-color:#ffffff;
+	color: black;
+	cursor: pointer;
+}
+
+div label:hover {
+	cursor: pointer;
+}
+
+a.closebtn {
+	float: right;
+	margin:4px -10px 0px 0px;
+	font-family: arial;
+	font-size: 22px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #999999;
+}
