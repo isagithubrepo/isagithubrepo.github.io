@@ -5,18 +5,17 @@ body {
 	background-repeat: repeat;
 	background-size: cover;
 	background-color: #e6e6e6;
-	font-family: Arial;
+	font-family: century gothic;
 }
 
 h1 {
-	background-color: black;
 	display:none;
-	margin-top:-100px;
 	position: absolute;
 	z-index:-1;
 	font-size: 90px;
 	color: white;
 	width: auto;
+	text-shadow: 0 0 5px grey;
 }
 
 h2 {
@@ -27,6 +26,7 @@ h2 {
 p.my {
 	position: absolute;
 	z-index:-1;
+	margin-top: 100px;
 	font-weight: bold;
 	color: #d9d9d9;
 }
@@ -42,10 +42,10 @@ img.ico {
 }
 
 div.wrapper {
+	position: absolute;
 	margin:10% 0px 0px 45%;
 	width: 240px;
 	height: auto;
-	background-color: green;
 }
 
 div.about_me,
@@ -70,17 +70,20 @@ div.content {
 	display: none;
 	opacity: 0.85;
 	float: left;
-	margin: -20px 0px 0px 40px;
+	margin: 100px 0px 0px 0px;
 	padding: 0px 20px 20px 20px;
 	position: absolute;
 	background-color: #ffffff;
 	border-radius: 10px;
 	border-style: solid;
 	border-color: #999999;
-	border-width: 2px;
-	width: auto;
+	border-width: 0px;
+	width: 800px;
 	height: auto;
 	color: #404040;
+	box-shadow:  0 0 5px grey;
+	overflow: auto;
+	font-size: 14px;
 }
 
 label {	
@@ -91,10 +94,11 @@ label {
 div.about_me:hover,
 div.my_projects:hover,
 div.contact_me:hover{
-	border-color: #4dd2ff;
+	border-color: white;
 	background-color:#ffffff;
 	color: black;
 	cursor: pointer;
+	box-shadow:  0 0 5px grey;
 }
 
 div label:hover {
@@ -109,4 +113,8 @@ a.closebtn {
 	font-weight: bold;
 	text-decoration: none;
 	color: #999999;
+}
+
+tr:hover {
+	background-color: #f2f2f2;
 }
