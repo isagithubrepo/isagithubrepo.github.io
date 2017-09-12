@@ -149,6 +149,7 @@ span.centering {
 body {
 	font-size: 14px;
 	background-color: #6699ff;
+	background: linear-gradient(#ccffcc, #ffbf80); 
 }
 
 li a {
@@ -172,6 +173,10 @@ div#top a{
 	background-color: #663300;
 	bottom: 10;
 	right: 10;
+	text-align: center;
+}
+
+section {
 	text-align: center;
 }
 
