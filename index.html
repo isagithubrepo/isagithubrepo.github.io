@@ -1,59 +1,291 @@
+<style>
+
+@font-face {
+    font-family: customFont1;
+    src: url(fonts/Prociono-Regular-webfont.woff);
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #ccffcc;
+	background: linear-gradient(#ccffcc, #ffbf80); 
+	font-family: calibri;
+}
+
+header,
+footer {
+	background-color: #663300;
+	width: 100%;
+	height: 5vh;
+}
+
+h1 {
+	padding: 0;
+	margin: 0 0 20 0;
+	text-align: center;
+}
+
+ul {
+	padding: 5 0 0 5;
+	margin: 0;
+	height: 100%;
+}
+
+li {
+	display: inline;
+	list-style: none;
+	
+}
+
+nav a {
+	color: white;
+	padding: 6 10 6 10;
+	text-decoration: none;
+}
+
+a#home_link {
+	font-family: customFont1;
+	color: white;
+}
+
+li a:hover {
+}
+
+section {
+	text-align: center;
+}
+
+section#home {
+	height: 95vh;
+}
+
+section#about_me,
+section#projects {
+	height: 100vh;
+}
+
+section#contact_me {
+	height: 95vh;
+}
+
+footer {
+	color: white;
+	bottom: 0;
+}
+
+div#top a{
+	padding: 20px;
+	display: block;
+	position: fixed;
+	background-color: #663300;
+	bottom: 10;
+	right: 10;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+}
+
+table,
+td{
+	border-color: #cc6600;
+	border-collapse: collapse;
+	border-style: solid;
+	border-width: 2px;
+}
+
+th {
+	background-color: #cc6600;
+}
+
+tr:hover {
+	background-color: #ffcc99;
+}
+
+.tag_basic {
+	background-color: blue;
+	color: white;
+	font-size: 12px;
+	margin: 1;
+	padding: 0px 2px 0px 2px;
+}
+
+.tag_intermediate {
+	background-color: green;
+	color: white;
+	font-size: 12px;
+	margin: 1;
+	padding: 0px 2px 0px 2px;
+}
+
+.tag_advance {
+	background-color: orange;
+	color: white;
+	font-size: 12px;
+	margin: 1;
+	padding: 0px 2px 0px 2px;
+}
+
+.tag_pro {
+	background-color: red;
+	color: white;
+	font-size: 12px;
+	margin: 1;
+	padding: 0px 2px 0px 2px;
+}
+
+img.ico {
+	vertical-align:middle;
+}
+
+span.email {
+	font-size: 30px;
+}
+
+span.centering {
+	margin-bottom: 50%;
+}
+
+@media only screen and (max-width: 500px) {
+
+body {
+	font-size: 14px;
+	background-color: #6699ff;
+}
+
+li a {
+	font-size: 12px;
+}
+
+h1 {
+	font-size: 18px;
+}
+
+h2 {
+	font-size: 16px;
+
+}
+
+div#top a{
+	font-size: 12px;
+	padding: 10px;
+	display: block;
+	position: fixed;
+	background-color: #663300;
+	bottom: 10;
+	right: 10;
+	text-align: center;
+}
+
+section#contact_me,
+section#home {
+	height: 95vh;
+}
+
+section#about_me,
+section#projects {
+	height: 100vh;
+}
+
+table {
+	display: none;
+}
+
+img.ico {
+	height: 20px;
+}
+
+
+.tag_basic,
+.tag_intermediate,
+.tag_advance,
+.tag_pro {
+	font-size: 8px;
+}
+
+}
+
+
+
+</style>
 <html>
 <head>
-	<link rel="stylesheet" types="text/css" href="style/style1.css"/>
+	<link rel="stylesheet" types="text/css" href=""/>
 	<title>Welcome!</title>
 	<link rel="shortcut icon" href="img/ico/icon-home.png" />
 </head>
 <body>
-	<header id="top">
-		<nav class="main">
+
+	<header id="main">
+		<nav>
 			<ul>
-				<li><a href="https://isagithubrepo.github.io/" id="home_link" >isagithubrepo.github.io</a></li>
+				<li><a id="home_link" href="https://isagithubrepo.github.io/">isagithubrepo.github.io</a></li>
 				<li><a class="l1" href="#about_me">About Me</a></li>
-				<li><a class="l1" href="#my_projects">My Personal Projects</a></li>
+				<li><a class="l1" href="#projects">Personal Projects</a></li>
 				<li><a class="l1" href="#contact_me">Contact Me</a></li>
 			</ul>
 		</nav>
 	</header>
 	
-	<nav class="float_nav">
-		<ul><li><a href="#top">Top</a></li></ul>
-	</nav>
-	<section id="home">
-		<article><br><br><br><br><br><br><br>
-			<p>Hello world!, my name is <b>Isa</b></p>
-			<p>and I'm currently <b>looking for job</b></p>
-			<p>Interested in <b>learning</b> new stuff</p>
-			<p>I also do <b>freelancing</b> web programming, feel free to <b><a href="#contact_me">Contact Me</a></b> if interested</p>
-		</article>
+	<section id="home"><span class="centering">
+		</br></br></br></br></br></br><h1>Welcome Visitor!</h1>
+		<p>Hello world!, my name is <b>Isa</b></p>
+		<p>and I'm currently looking for <strong>job</strong></p>
+		<p>Interested in <b>learning</b> new stuff</p>
+		<p>I also do <strong>freelancing</strong> web programming, feel free to <b><a href="#contact_me">Contact Me</a></b> if interested</p>
+		</span>
 	</section>
 	
 	<section id="about_me">
-	<h1>About Me</h1>
-		<article id="a2">
-			Please allow javascript on this page
-		</article>
+	
 	</section>
 	
-	<section id="my_projects">
-	<h1>Personal Projects</h1>
-		<article id="a3">
-			Please allow javascript on this page
-		</article>
+	<section id="projects">
 	</section>
 	
 	<section id="contact_me">
-	<h1>Contact Me</h1>
-		<article id="a4">
-		</article>
 	</section>
 	
 	<footer>
-		Isa 2017
+		<center>Isa 2017</center>
 	</footer>
+	
+	<div id="top"><a href="#main">TOP</a></div>
 	
 <script src="scripts/jquery-3.1.1.min.js"></script>
 <script src="scripts/jquery.color-2.1.2.min.js"></script>
-<script src="scripts/jquery-my.js"></script>
+<script>
+	//$("section#about_me").load("section/about_me");
+	
+	$('a[href^="#"]').on('click', function(e) {
+		var target = $(this.getAttribute('href'));
+		if( target.length ) {
+		e.preventDefault();
+			$('html, body').stop().animate({
+			scrollTop: target.offset().top
+			}, 400);
+		}
+	});
+	
+
+	
+	$("a.l1").hover(
+	function () {
+		$(this).animate({
+			color: "#00ffff"
+		}, 300);
+	}, 
+	function () {
+		$(this).animate({
+			color: "#ffffff"
+		}, 100);
+	});
+	
+	//$("#home").load("section/home/");
+	$("#about_me").load("section/about_me/");
+	$("#projects").load("section/personal_projects/");
+	$("#contact_me").load("section/contact_me/");
+	
+</script>
 </body>
 </html>
