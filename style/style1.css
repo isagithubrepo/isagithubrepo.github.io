@@ -8,7 +8,7 @@
 body {
 	
 	background: #ccffcc;
-	background: linear-gradient(#ccffcc, #ffbf80); 
+	background: linear-gradient(#ccffcc, #ffbf80);  
 	background-position: top-left;
 	background-repeat: repeat;
 	scroll-behavior: smooth;
@@ -190,3 +190,12 @@ label.simple_center {
 div.notes {
 	font-size: 12px;
 }
+
+@media only screen and (max-width: 500px) {
+
+body {
+ 
+}
+
+}
+
