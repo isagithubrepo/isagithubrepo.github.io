@@ -191,15 +191,17 @@ section#projects {
 	height: 100vh;
 }
 
-.hideMeM,
-table {
+.min_width {
+	width: 1%;
+}
+
+.hideMeM {
 	display: none;
 }
 
 img.ico {
 	height: 20px;
 }
-
 
 .tag_basic,
 .tag_intermediate,
