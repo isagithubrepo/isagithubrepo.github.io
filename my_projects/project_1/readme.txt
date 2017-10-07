@@ -4,4 +4,5 @@ UMS is a simple online user management system. Where staff can register and crea
 Language:
 HTML, CSS, Javascript, PHP(MySQL)
 
-Type: Web app
+Type
+Web app
