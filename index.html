@@ -39,6 +39,16 @@ header.main{
 	padding: 10px;
 }
 
+header.background{
+	background-image: linear-gradient(-90deg, #bfbfbf, #808080);
+	color: #bfbfbf;
+	font-size: 24px;
+	border: 2px outset white;
+	padding: 10px;
+}
+
+
+
 nav {
 	padding: 10px;
 	border: 2px outset white;
@@ -225,24 +235,66 @@ a.dummy_close:active {
 	font-size: 18px;
 }
 
+div.dummy_popup {
+	display: none;
+	position: absolute;
+	top: 8%;
+	left: 2%;
+	width: 50%;
+	height: 50%;
+	background: red;
+	background: #bfbfbf;
+	border: 2px outset white;
+}
+
+div.dummy_popup header {
+	height: 9%;
+}
+
+label.note {
+	font-size: 12px;
+	font-style: italic;
+}
+
+div#dummy_icon1 {
+	display: none;
+	position: relative;
+	top: 30%;
+}
+
+div#dummy_icon1 a {
+	text-decoration: none;
+	color: white;
+}
+
 </style>
 <html>
 <head>
 </head>
+
+
+
 <body>
+	
+	<div id="dummy_icon1">
+		<center>
+			<a href="#open_browse"><img src="img/ico/web_icon.png" height="45px" ></img><br>View Window</a>
+		</center>
+	</div>
+	
 	<header class="main">
 		isagithubrepo.github.io
-		<a href="#" class="dummy_close">X</a>
-		<a href="#" class="dummy_help">?</a>
+		<a href="#" class="dummy_close" id="c1" title="close window">X</a>
+		<a href="#" class="dummy_help" title="Help" >?</a>
 	</header>
 
 	<nav>
 		<a href="#" class="bar"></a>
 		&nbsp;
-		<a href="#home" class="current"><u>H</u>ome</a>
-		<a href="#about_me"><u>A</u>bout Me</a>
-		<a href="#projects"><u>S</u>amples</a>
-		<a href="#contact_me"><u>C</u>ontact Me</a>
+		<a href="#home" class="current" title="homepage"><u>H</u>ome</a>
+		<a href="#about_me" title="display details about me"><u>A</u>bout Me</a>
+		<a href="#projects" title="sample site i have made"><u>S</u>amples</a>
+		<a href="#contact_me" title="view my contact details"><u>C</u>ontact Me</a>
 	</nav>
 	
 	<div class="section">
@@ -262,9 +314,32 @@ a.dummy_close:active {
 		<label id="dummy_agreement">
 			<input type="checkbox" checked></input>Classic Theme Prepared by isa 2018
 		</label>
-		<a href="okei" class="enable" id="d1"><u>O</u>K</a>
+		<a href="okei" class="enable" id="d1" title="view about this site"><u>A</u>bout</a>
 	</footer>
-
+	
+	<div class="dummy_popup">
+		<header class="background">
+			About this site
+		<a href="#" class="dummy_close" id="c2" title="close window">X</a>
+		</header>
+		
+		<article>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<center>
+			Theme V4<br>
+			<i>Classic Theme Prepared by isa 2018</i><br>
+			<b>isa20021991@gmail.com</b><br>
+			<label class="note">
+				Note : draggable window is not implement yet. haha.
+			</label>
+			</center>
+		</article>
+	<div>
+	
 	<script src="scripts/jquery-3.1.1.min.js"></script>
 	<script src="scripts/jquery.color-2.1.2.min.js"></script>
 	<script>
@@ -310,10 +385,40 @@ a.dummy_close:active {
 	
 	$('a#d1').on('click', function(e) {
 		e.preventDefault();
-		alert("Thanks for Visiting!");
+		//alert("Thanks for Visiting!");
+		$("div.dummy_popup").show();
+		$("body header.main").attr("class", "background");
+		$("div.dummy_popup header").attr("class", "main");
 	});	
-		
-		
+	
+	$('a#c1').on('click', function(e) {
+		e.preventDefault();
+		$("body header").hide();
+		$("body nav").hide();
+		$("body section").hide();
+		$("body div.section").hide();
+		$("body footer").hide();
+		$("div#dummy_icon").show();
+	});	
+	
+	$('a[href="#open_browse"]').on('click', function(e) {
+		e.preventDefault();
+		$("body header").show();
+		$("body nav").show();
+		$("body section").show();
+		$("body footer").show();
+		$("div#dummy_icon").hide();
+	});	
+	
+	
+	
+	$('a#c2').on('click', function(e) {
+		e.preventDefault();
+		$("div.dummy_popup").hide();
+		$("body header.main").attr("class", "");
+		$("body header.background").removeClass().addClass("main");
+	});	
+	
 	function LoadSection() {
 		$("section#home").load("section/home/");
 		$("section#about_me").load("section/about_me/");
