@@ -196,6 +196,34 @@ tr:hover {
 	padding: 0px 2px 0px 2px;
 }
 
+a.dummy_help,
+a.dummy_close {
+	background: #bfbfbf;
+	text-decoration: none;
+	font-size: 18px;
+	color: black;
+	border: 2px outset #bfbfbf;
+	padding: 3 10 3 10;
+	float: right;
+}
+
+a.dummy_help {
+	margin-right: 5px;
+}
+
+a.dummy_help:hover {
+	cursor: help;
+}
+a.dummy_close:hover {
+	cursor: default;
+}
+
+a.dummy_help:active,
+a.dummy_close:active {
+    border-style: inset;
+	color: grey;
+	font-size: 18px;
+}
 
 </style>
 <html>
@@ -204,6 +232,8 @@ tr:hover {
 <body>
 	<header class="main">
 		isagithubrepo.github.io
+		<a href="#" class="dummy_close">X</a>
+		<a href="#" class="dummy_help">?</a>
 	</header>
 
 	<nav>
