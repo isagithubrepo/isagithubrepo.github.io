@@ -1,0 +1,207 @@
+<html>
+<head>
+<style>
+html {
+	background-color:#f2f2f2;
+	font-family: calibri;
+}
+	
+header {
+	Padding: 30px 0px 0px 10px;
+	background-color:#ffd966;
+	height: 50px;
+	text-align: center;
+	font-size: 34px;
+	font-weight: bold;
+}
+
+nav {
+	background-color:#ffd966;
+	height: 50px;
+	font-size: 18px;
+}
+
+div.container {
+	margin-top: -20px;
+	display: none;
+	height: auto;
+	background-color:white;
+}
+	
+footer {
+	background-color:#ffd966;
+	font-size: 12;
+	text-align: center;
+	color: white;
+}
+
+H3 {
+	background-color:#ffd966;
+	padding: 5px 0px 5px 0px;
+	text-align: center;
+	font-size: 24px;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+nav li {
+	float: left;
+}
+
+nav li a {
+	font-weight: bold;
+	text-decoration: none;
+	padding: 10px;
+	color: white;
+}
+
+.content {
+	padding: 0px 0px 10px 0px;
+}
+
+p {
+	padding-left: 25px;
+}
+
+label#mail{
+	color: green;
+	font-weight: bold;
+}
+
+label#zero {
+	color: white;
+}
+
+h1 {
+	padding-left: 24px;
+	font-size: 18px;
+}
+
+a.link {
+	text-decoration: none;
+}
+
+img.ico {
+	vertical-align:middle;
+}
+
+p.footnote {
+	font-size: 12px;
+}
+
+</style>
+</head>
+	<title>Welcome!</title>
+	<link rel="shortcut icon" href="img/icon-home.png" />
+<body>
+	<header>
+		Welcome Visit<label id="zero">O</label>r!
+	</header>
+	<nav>
+		<ul>
+			<li><a href="home" onClick="changeHColor()" title="home">Home</a></li>
+			<li><a href="about_me" onClick="changeHColor()" title="a little info about isa">About Me</a></li>
+			<li><a href="projects" onClick="changeHColor()" title="download isas stuff">My Projects</a></li>
+			<li><a href="contact" onClick="changeHColor()" title="how to contact me">Contact Me</a></li>
+		</ul>
+	</nav>
+	
+	<div class="container">
+		<div class="content" id="home">
+			<h3>Home</h3>
+				<h1>Introduction</h1>
+				<p>
+					Hello, my name is Muhd Isa, this github page is created for the visitor to view my stuff.
+				</p>
+		</div>
+		
+		<div class="content" id="about_me">
+			<h3>About Me</h3>
+				
+				<h1>Technical Skill:</h1>
+				<p>
+					<b>OS Platform:</b> Windows 7, 10<br>
+					<b>Software:</b> MS word, MS powerpoint, MS excel, XAMPP, Android Studio(basic), Oracle VM virtualBox(basic)<br>
+					<b>Language:</b> Java(basic), C++(basic), Html, PHP mysql/PDO, Javascript(Jquery)<br><br>
+				</p>
+				
+				<h1>Interest:</h1>
+				<p>
+					Programming<br>
+					PC Hardware<br>
+					Games<br>
+					Internet Browsing<br><br>
+				</p>
+				<h1>Other Documents:</h1>
+				<p>
+					<a class="link" href="doc/Resume_25_Sept_2018.docx"><img class="ico" src="img/view.png" title="View Isa resume"/>View Resume</a>
+				</p>
+				
+		</div>
+		
+		<div class="content" id="projects">
+			<h3>My Projects</h3>
+			<h1>Java:</h1>
+			<p>
+				<a class="link" href="projects/java-myansweringmachine.zip">IAM - Isa Answering Machine</a> - IAM is simple and basic *java project with simple gui where user can ask about me (the answer is predefined and limited)
+			</p>
+			<br>
+			<br>
+			<p class="footnote">
+				*make sure you have installed latest version of java on your system to run java based application
+			</p>
+		</div>
+		
+		<div class="content" id="contact">
+			<h3>Contact Me</h3>
+			<p>
+				Feel free to contact me by email at: <label id="mail">isa20021991@gmail.com</label>
+			</p>
+		</div>
+		
+	</div>
+	
+	<footer>
+		Created by Muhd Isa 2016
+	</footer>
+	
+<script src="script/jquery-3.1.1.min.js"></script>
+<script>
+
+$(document).ready(function(){
+	var page="div#home";
+	var color=["#ffb3b3", "#b3b3ff", "#b3ffb3", "#ecb3ff"]; //white red blue green purple
+
+
+	function randumn(){
+		var n=Math.floor((Math.random()*4)+0);
+		return n;
+	}
+
+	function hideContentbut(showp){
+		$(".content").hide();
+		$(showp).fadeIn();
+	}
+
+	$("li a").on('click', function(e) {
+		e.preventDefault();
+		$link=$(this).attr('href');
+		page="div#"+$link;
+		hideContentbut(page);
+		changeHColor();
+	});
+
+	function changeHColor() {
+		$("h3, header, nav, footer, li a").css("background-color",color[randumn()]);
+	}
+	
+	$("div.container").show();
+	hideContentbut(page);
+});
+</script>
+</body>
+</html>

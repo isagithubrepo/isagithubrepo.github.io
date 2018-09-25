@@ -1,0 +1,31 @@
+.tag_basic {
+	background-color: blue;
+	color: white;
+	font-size: 12px;
+	margin: 1;
+	padding: 0px 2px 0px 2px;
+}
+
+.tag_intermediate {
+	background-color: green;
+	color: white;
+	font-size: 12px;
+	margin: 1;
+	padding: 0px 2px 0px 2px;
+}
+
+.tag_advance {
+	background-color: orange;
+	color: white;
+	font-size: 12px;
+	margin: 1;
+	padding: 0px 2px 0px 2px;
+}
+
+.tag_pro {
+	background-color: red;
+	color: white;
+	font-size: 12px;
+	margin: 1;
+	padding: 0px 2px 0px 2px;
+}
